@@ -1,0 +1,32 @@
+- name: disable nodejs defailt vsersion
+  ansible.builtin.shell: dnf module disable nodejs -y
+
+- name: enable nodejs 20 Module
+  ansible.builtin.shell: dnf module enable nodejs:20 -y
+
+- name: Install nodejs
+  ansible.builtin.dnf:
+    name: nodejs
+    state: latest
+
+- name: Run common module tasks
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: apps-prereq
+
+- name: Download nodejs dependencies
+  ansible.builtin.shell: npm install 
+  args: 
+    chdir: "{{ app_path }}"
+
+- name: include common role schema
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: schema.yml
+
+- name: include common role systemd
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd.yml
+
+

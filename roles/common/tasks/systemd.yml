@@ -1,0 +1,11 @@
+- name: Copy Service file
+  ansible.builtin.copy:
+    src: catalogue.service
+    dest: /etc/systemd/system/catalogue.service
+
+- name: start service
+  ansible.builtin.systemd_service:
+    name: catalogue
+    state: restarted
+    enabled: yes
+    daemon-reload: yes
