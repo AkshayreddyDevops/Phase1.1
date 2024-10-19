@@ -4,4 +4,4 @@
     url: google.com
   tasks: 
     - name: Print URL
-      msg: URL = {{ URL }}
+      msg: "URL = {{ URL }}"
