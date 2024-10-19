@@ -10,7 +10,7 @@
 
 - name: Update Mongo Config file
   ansible.builtin.replace:
-    src: /etc/yum.repos.d/mongo.repo
+    path: /etc/yum.repos.d/mongo.repo
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
