@@ -11,13 +11,13 @@
 
 - name: Update Redis conf listen addr from 127.0.0.1 to 0.0.0.0
   ansible.builtin.replace:
-    path: /etc/mongod.conf
+    path: /etc/redis/redis.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
 - name: Update Redis conf protection mode to on
   ansible.builtin.lineinfile:
-    path: /etc/mongod.conf
+    path: /etc/redis/redis.conf
     regexp: 'protected-mode'
     line: 'protected-mode on'
 
