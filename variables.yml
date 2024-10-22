@@ -1,7 +1,7 @@
 - name: Retrive variables from previous tasks_from
   hosts: localhost
   tasks:
-    - ansible.builtin.shell:
+    - ansible.builtin.shell: uptime
       register: output
 
     - ansible.builtin.debug:
