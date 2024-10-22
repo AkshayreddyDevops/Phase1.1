@@ -1,4 +1,4 @@
 - name: Load java service
   ansible.builtin.include_role:
     name: common
-    from_task: java
+    from_tasks: java
