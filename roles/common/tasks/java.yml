@@ -1,0 +1,26 @@
+- name: Install mavan
+  ansible.builtin.dnf:
+    name: mavan
+    state: latest
+
+- name: Include app prereq
+  ansible.builtin.include_role:
+    name: common
+    from_taks: app-prereq
+
+- name: Download dependences
+  ansible.builtin.shell: mvn clean package; mv target/shipping-1.0.jar shipping.jar
+  args:
+    chdir: "{{ app_path }}"
+
+- name: Lode schema from common
+  ansible.builtin.include_role:
+    role: common
+    from_taks: schema
+
+- name: load systemd from common
+  ansible.builtin.include_role:
+    role: common
+    from_taks: systemd
+
+
