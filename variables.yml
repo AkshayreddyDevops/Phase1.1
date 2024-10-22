@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
     - ansible.builtin.shell: uptime
-      register: output
+      register: out
 
     - ansible.builtin.debug:
         msg: "{{ out }}"
