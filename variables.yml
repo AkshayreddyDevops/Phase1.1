@@ -5,4 +5,4 @@
       register: output
 
     - ansible.builtin.debug:
-      msg: "{{ out }}"
+        msg: "{{ out }}"
