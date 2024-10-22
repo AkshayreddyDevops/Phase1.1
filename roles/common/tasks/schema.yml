@@ -13,13 +13,13 @@
       ansible.builtin.shell: mongosh --host 172.31.17.213 </app/db/master-data.js
 
 - name: load Mysql
-  when: schema_setup == "mysql"
+  when: schema_setup == "mysqld"
   block:
     - name: install mysql client
       ansible.builtin.dnf:
         name: mysql
         state: latest
-    - name: load data
-      ansible.builtin.shell: mysql -h 54.146.161.72 -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
-      loop: "{{ schema_files }}"
+    # - name: load data
+    #   ansible.builtin.shell: mysql -h 172.31.31.104 -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
+    #   loop: "{{ schema_files }}"
         
