@@ -1,10 +1,10 @@
 - name: Error Handling
   hosts: localhost
   tasks:
-    - shell: id roboshop
+    - shell: id ec2-user
       register: out
       ignore_errors: yes
-      
+
     - debug: 
         msg: yes user exists {{ out.stdout }}
     
