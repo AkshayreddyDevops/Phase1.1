@@ -20,6 +20,6 @@
         name: mysql
         state: latest
     - name: load data
-      ansible.builtin.shell: mysql -h172.31.31.104 -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
+      ansible.builtin.shell: mysql -h 172.31.31.104 -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
       loop: "{{ schema_files }}"
         
