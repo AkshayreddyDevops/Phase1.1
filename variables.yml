@@ -1,8 +1,8 @@
-- name: Demo on variables
-  hosts: all
-  vars: 
-    URL: google.com
-  tasks: 
-    - name: Print URL
-      ansible.builtin.debug:
-        msg: URL = {{ URL }}
+- name: Retrive variables from previous tasks_from
+  host: localhost
+  tasks:
+    - ansible.builtin.shell:
+      register: output
+
+    - ansible.builtin.debug:
+      msg: "{{ out }}"
