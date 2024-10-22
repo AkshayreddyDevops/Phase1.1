@@ -1,6 +1,6 @@
-- name: Install mavan
+- name: Install maven
   ansible.builtin.dnf:
-    name: mavan
+    name: maven
     state: latest
 
 - name: Include app prereq
