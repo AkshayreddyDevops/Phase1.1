@@ -25,3 +25,13 @@
     enabled: yes
     daemon-reload: yes
   when: component == 'user'
+
+
+
+- name: start service
+  ansible.builtin.systemd_service:
+    name: mysqld
+    state: restarted
+    enabled: yes
+    daemon-reload: yes
+  when: component == 'mysql'

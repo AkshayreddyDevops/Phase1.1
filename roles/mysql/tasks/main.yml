@@ -1,0 +1,14 @@
+- name: Install mysql
+  ansible.builtin.dnf:
+    name: mysql-server
+    state: latest
+
+- name: Change default password
+  ansible.builtin.shell: mysql_secure_installation --set-root-pass RoboShop@1
+
+  
+- name: import service role from common
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd.yml
+
