@@ -6,7 +6,7 @@
 - name: Include app prereq
   ansible.builtin.include_role:
     name: common
-    tasks_from: app-prereq
+    tasks_from: apps-prereq
 
 - name: Download dependences
   ansible.builtin.shell: mvn clean package; mv target/shipping-1.0.jar shipping.jar
