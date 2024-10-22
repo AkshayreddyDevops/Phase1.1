@@ -1,0 +1,9 @@
+- name: Error Handling
+  hosts: localhost
+  tasks:
+    - shell: id roboshop
+      register: out
+
+    - debug: 
+        msg: yes user exists {{ out.stdout }}
+    
