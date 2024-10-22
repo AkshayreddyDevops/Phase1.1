@@ -10,7 +10,7 @@
         name: mongodb-mongosh
         state: latest
     - name: Load Master data
-      ansible.builtin.shell: mongosh --host 172.31.17.213 </app/db/master-data.js
+      ansible.builtin.shell: mongosh --host 54.146.161.72 </app/db/master-data.js
 
 - name: load Mysql
   when: schema_setup == "mysql"
