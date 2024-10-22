@@ -3,7 +3,8 @@
   tasks:
     - shell: id roboshop
       register: out
-
+      ignore_errors: yes
+      
     - debug: 
         msg: yes user exists {{ out.stdout }}
     
