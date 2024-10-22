@@ -35,3 +35,17 @@
     enabled: yes
     daemon-reload: yes
   when: component == 'mysql'
+
+- name: shipping service config
+  when: component == "shipping"
+  block:
+    - name: copy shipping.service file
+      ansible.builtin.template:
+        src: shipping.service
+        dest: /etc/systemd/system/shipping.service
+    - name: enable & start service
+      ansible.builtin.systemd_service:
+        name: shipping
+        state: restarted
+        enabled: yes
+        daemon-reload: yes

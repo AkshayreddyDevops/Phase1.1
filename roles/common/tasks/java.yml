@@ -6,7 +6,7 @@
 - name: Include app prereq
   ansible.builtin.include_role:
     name: common
-    from_taks: app-prereq
+    from_tasks: app-prereq
 
 - name: Download dependences
   ansible.builtin.shell: mvn clean package; mv target/shipping-1.0.jar shipping.jar
@@ -16,11 +16,11 @@
 - name: Lode schema from common
   ansible.builtin.include_role:
     role: common
-    from_taks: schema
+    from_tasks: schema
 
 - name: load systemd from common
   ansible.builtin.include_role:
     role: common
-    from_taks: systemd
+    from_tasks: systemd
 
 
