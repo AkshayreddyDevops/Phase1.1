@@ -14,8 +14,8 @@
     - ansible.builtin.debug:
         msg: "{{ v1 }}"
 
-  roles:
-    - sample
+  # roles:
+  #   - sample
 
 # cli 
 # role
