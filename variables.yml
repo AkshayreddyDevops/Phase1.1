@@ -7,8 +7,8 @@
         msg: "{{ v1 }}"
     - ansible.builtin.debug:
         msg: "Hello "
-      # vars:
-      #   v1: "from tasks"
+      vars:
+        v1: "from tasks"
     - ansible.builtin.debug:
          msg: "Hi"
     - ansible.builtin.debug:
@@ -17,4 +17,5 @@
   roles:
     - sample
 
-    
+cli 
+role
