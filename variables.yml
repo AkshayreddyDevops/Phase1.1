@@ -3,8 +3,8 @@
   # vars:
   #    v1: "from vars"
   tasks:
-    - ansible.builtin.debug:
-        msg: "{{ v1 }}"
+    # - ansible.builtin.debug:
+    #     msg: "{{ v1 }}"
     - ansible.builtin.debug:
         msg: "Hello "
       vars:
