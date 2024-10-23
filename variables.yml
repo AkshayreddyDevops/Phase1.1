@@ -3,14 +3,12 @@
   vars:
      v1: "from vars"
   tasks:
-    - ansible.builtin.shell: uptimes
-      register: out
-
-    - ansible.builtin.debug:
-        msg: "{{ out }}"
-      vars: 
-       v1: "from tasks"
-    - ansible.builtin.debug:
+    vars: 
+      v1: "From tasks"
+    ansible.builtin.debug:
       msg: "{{ v1 }}"
+     
+      
+
 
     
