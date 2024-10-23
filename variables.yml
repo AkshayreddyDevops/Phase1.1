@@ -13,12 +13,12 @@
          msg: "Hi"
     - ansible.builtin.debug:
         msg: "{{ v1 }}"
-      # vars: 
-      #   v1: "from tasks"
+      vars: 
+        v1: "from tasks"
 
 
-  # roles:
-  #   - sample
+  roles:
+    - sample
 
 # cli 
 # tasks
