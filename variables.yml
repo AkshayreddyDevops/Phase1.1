@@ -13,6 +13,8 @@
         msg: "{{ v1 }}"
       # vars: 
       #   v1: "from tasks"
+      vars_files:
+        - var_file.yml
 
   # roles:
   #   - sample
