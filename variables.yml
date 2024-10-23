@@ -1,5 +1,7 @@
 - name: Retrive variables from previous tasks_from
   hosts: localhost
+  vars_files:
+    - var_file.yml
   vars:
      v1: "from vars"
   tasks:
@@ -13,8 +15,7 @@
         msg: "{{ v1 }}"
       # vars: 
       #   v1: "from tasks"
-      vars_files:
-        - var_file.yml
+
 
   # roles:
   #   - sample
