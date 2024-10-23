@@ -27,7 +27,7 @@
 # Vars
 #defaults 
 
----
+
 ########## loops#########
 - name: loops
   hosts: localhost
