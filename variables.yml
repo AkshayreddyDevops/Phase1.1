@@ -1,19 +1,19 @@
 - name: Retrive variables from previous tasks_from
   hosts: localhost
-  vars:
-     v1: "from vars"
+  # vars:
+  #    v1: "from vars"
   tasks:
     - ansible.builtin.debug:
         msg: "{{ v1 }}"
     - ansible.builtin.debug:
         msg: "Hello "
-      vars:
-        v1: "from tasks"
+      # vars:
+      #   v1: "from tasks"
     - ansible.builtin.debug:
          msg: "Hi"
     - ansible.builtin.debug:
         msg: "{{ v1 }}"
 
-  role: samole
+  role: sample
 
     
