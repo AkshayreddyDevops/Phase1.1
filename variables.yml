@@ -10,5 +10,7 @@
         msg: "{{ out }}"
       vars: 
        v1: "from tasks"
+    - ansible.builtin.debug:
+      msg: "{{ v1 }}"
 
     
