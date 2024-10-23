@@ -1,8 +1,14 @@
 - name: Retrive variables from previous tasks_from
   hosts: localhost
+  vars:
+     v1: "from vars"
   tasks:
-    - ansible.builtin.shell: uptime
+    - ansible.builtin.shell: uptimes
       register: out
 
     - ansible.builtin.debug:
         msg: "{{ out }}"
+    - vars: 
+       v1: "from tasks"
+
+    

@@ -6,5 +6,5 @@
       ignore_errors: yes
 
     - debug: 
-        msg: yes user exists {{ out.stdout['gid']  }}
+        msg: yes user exists {{ out.stdout }}
     
