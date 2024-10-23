@@ -8,7 +8,7 @@
 
     - ansible.builtin.debug:
         msg: "{{ out }}"
-    - vars: 
+      vars: 
        v1: "from tasks"
 
     
