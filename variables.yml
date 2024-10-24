@@ -36,6 +36,6 @@
       debug:
         msg: fruit - {{ item }}
       loop:
-        - Apple
-        - Mango
-        - bananna
+        - {name: Apple, qunt: 100}
+        - {name: Mango, qunt: 100}
+        - {name: orange, qunt: 200}
